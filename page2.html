@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer & Task List</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Pomodoro Timer</h1>
+    
+            <div class="painel">
+                <p id="work">Work</p>
+                <p id="break">Break</p>
+            </div>
+    
+            <div class="timer">
+                <div class="circle">
+                    <div class="time">
+                        <p id="minutes">25</p>
+                        <p>:</p>
+                        <p id="seconds">00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="controls">
+                <label for="pomodoro-time">Set Pomodoro Time (Minutes): </label>
+                <input type="number" id="pomodoro-time" value="25" min="1" />
+                <button id="start" onclick="start()">Start</button>
+                <button id="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </section>
+    <!-- To-Do List Section -->
+    <section class="todo-container">
+        <header>
+            <h1>Task List</h1>
+            <form id="new-task-form">
+                <input 
+                    type="text" 
+                    name="new-task-input" 
+                    id="new-task-input" 
+                    placeholder="What do you have planned?" />
+                <input 
+                    type="submit"
+                    id="new-task-submit" 
+                    value="Add task" />
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
+                <h2>Tasks</h2>
+                <div id="tasks">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
